@@ -43,13 +43,13 @@ def main(input_file, output_file):
 
     # 翻译文本
     #每20行翻译一次
-    translated_text = ''
-    for i in range(0, len(english_text.split('\n')), 20):
-        text = '\n'.join(english_text.split('\n')[i:i+20])
-        translated_text += translate_text(text) + '\n'
-        print(f'{i}/{len(english_text.splitlines())}')
+    #translated_text = ''
+    #for i in range(0, len(english_text.split('\n')), 20):
+    #    text = '\n'.join(english_text.split('\n')[i:i+20])
+    #    translated_text += translate_text(text) + '\n'
+    #    print(f'{i}/{len(english_text.splitlines())}')
     
-
+    translated_text = english_text
     if translated_text:
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write(translated_text)
